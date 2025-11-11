@@ -62,3 +62,13 @@ def HttpTriggerToSnowflake(req: func.HttpRequest) -> func.HttpResponse:
 
     # 3. Send a "success" response back to your browser
     return func.HttpResponse("Pipeline finished successfully.", status_code=200)
+"""
+@app.timer_trigger(schedule="*/10 * * * * *", arg_name="myTimer", run_on_startup=False,
+              use_monitor=False) 
+def FetchRandomUser(myTimer: func.TimerRequest) -> None:
+    
+    if myTimer.past_due:
+        logging.info('The timer is past due!')
+
+    logging.info('Python timer trigger function executed.')
+"""

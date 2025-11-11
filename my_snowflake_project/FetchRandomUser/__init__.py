@@ -60,7 +60,8 @@ def main(mytimer: func.TimerRequest) -> None:
             "account": os.environ["SNOWFLAKE_ACCOUNT"],
             "warehouse": os.environ["SNOWFLAKE_WAREHOUSE"],
             "database": os.environ["SNOWFLAKE_DATABASE"],
-            "schema": os.environ["SNOWFLAKE_SCHEMA"]
+            "schema": os.environ["SNOWFLAKE_SCHEMA"],
+            "role": os.environ["SNOWFLAKE_ROLE"]
         }
     except KeyError as e:
         logging.error(f"Missing setting: {e}. Check your local.settings.json.")
