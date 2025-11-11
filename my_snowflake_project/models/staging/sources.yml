@@ -1,0 +1,15 @@
+version: 2
+ 
+sources:
+  # This is the first argument in your source() function
+  - name: python_feed
+ 
+    # This tells dbt which database/schema to look in
+    # (Update this if your raw table is somewhere else)
+    database: python_api_insert_test
+    schema: PUBLIC
+ 
+    # This lists all the tables from this source
+    tables:
+      # This is the second argument in your source() function
+      - name: RAW_USER_SIGNUPS

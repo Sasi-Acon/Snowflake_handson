@@ -1,0 +1,1 @@
+"C:\Users\SasidaranVelliangiri\Documents\Snowflake handson\load_to_snowflake.py"
